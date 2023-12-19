@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(back.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    color: #fafafa;
+    margin: 10px;
+    font-size: xx-large;
+    font-family: 'Chopin Script';
+}
+
+.snow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-image: url(snowio.jpeg);
+    background-size: cover;
+    background-color: transparent;
+    border-radius: 50%;
+    animation: animationSnow 4s ease-in-out infinite;
+}
+
+@keyframes animationSnow {
+    0% {
+        transform: translate(0px, 0px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(100px, 50vh);
+    }
+}
+
+
+.santa-gift-box img {
+    width: 50px; /* Set the width of the image */
+    height: 50px; /* Set the height of the image */
+    animation: rotateJumpZoomGift 2s ease-in-out infinite; /* Add the animation to the image */
+}
+
+@keyframes rotateJumpZoomGift {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+    20% {
+        transform: translateY(-5px) rotate(4deg) scale(1.2);
+    }
+    40% {
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+    60% {
+        transform: translateY(5px) rotate(0deg) scale(1.2);
+    }
+    80% {
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+}
+
+
+
+#fire {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: fireAnimation 2s infinite alternate-reverse;
+}
+
+@keyframes fireAnimation {
+    0% {
+        background: #f00;
+    }
+    50% {
+        background: #ff0;
+    }
+    100% {
+        background: #f00;
+    }
+    80% {
+        background: rgb(32, 84, 182);
+    }
+    70% {
+        background: rgb(44, 163, 14);
+    }
+}
+
+
+
+#container {
+    position: relative;
+}
+
+.wishes-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(45deg, #ff6666, #ffcc99);
+    border: 5px solid #fff;
+    padding: 20px;
+    text-align: center;
+    animation: borderAnimation 3s ease-in-out infinite;
+}
+
+.christmas-wishes {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-color: #fff;
+    }
+    50% {
+        border-color: #ff0000;
+    }
+    100% {
+        border-color: #fff;
+    }
+}
+
+
+
+#nameList {
+    margin-top: 20px;
+    display: none;
+}
+
+
+
+
+#nameList ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#nameList li {
+    margin-bottom: 5px;
+}
+/* Rest of your CSS styles... */

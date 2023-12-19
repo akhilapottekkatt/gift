@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Christmas</title>
+</head>
+<body>
+    <div id="container">
+        <h1> Merry Christmas & Happy New Year  </h1>
+
+        <!-- Input area for entering names -->
+        <div>
+            <label for="nameInput"></label>
+            <input type="text" id="nameInput" placeholder="Name in capital ">
+            <button onclick="addName()">Add Name</button>
+        </div>
+
+        <!-- List to display entered names -->
+        <div id="nameList">
+            <h3>Entered Names:</h3>
+            <ul></ul>
+        </div>
+
+        <audio id="christmasAudio" src="we-wish-you-a-merry-christmas_60sec-174155.mp3" loop></audio>
+        <div class="santa-gift-box" onclick="openGift()" title="Click me!">
+            <br>
+            <!-- Replace the emoji with an image -->
+            <img src="gift.gif" alt="Gift Image">
+        </div>
+        <div class="snow"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

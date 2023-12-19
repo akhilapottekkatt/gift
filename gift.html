@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Your head content here -->
+</head>
+<body>
+    <div id="container">
+        <h1>Christmas Gift</h1>
+
+        <div id="giftResult">
+            <!-- The result will be displayed here -->
+        </div>
+
+        <div id="fire"></div>
+
+        <!-- Add an image element to display the gift -->
+        <img id="giftImage" alt="Gift Image">
+
+        <div class="wishes-container">
+            <p class="christmas-wishes">
+                Wishing you a Merry Christmas and a Happy New Year filled with joy, peace, and love!
+            </p>
+        </div>
+        
+        <script src="script.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Get name and gift from the URL query parameters
+                const params = new URLSearchParams(window.location.search);
+                const name = params.get('name');
+                const gift = params.get('gift');
+
+                // Display the result
+                const giftResultContainer = document.getElementById('giftResult');
+                const giftImage = document.getElementById('giftImage');
+
+                if (name && gift) {
+                    // Display the name and gift information
+                    giftResultContainer.innerHTML = `<p>${name} received a gift!</p>`;
+
+                    // Set the source of the gift image with an absolute path
+                    giftImage.src = gift.startsWith('/') ? gift.substring(1) : gift;
+                } else {
+                    // Display a message if no valid data found
+                    giftResultContainer.innerHTML = '<p>No valid data found.</p>';
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Christmas and New Year's Wishes</title>
+</head>
+<body>
+    <div id="container">
+        <h1> Merry Christmas </h1>
+        <audio id="christmasAudio" src="we-wish-you-a-merry-christmas_60sec-174155.mp3" loop></audio>
+    
+        <div id="giftResult">
+            The result will be displayed here -->
+        <!-- </div>
+
+        <div id="fire"></div>
+
+        <div class="wishes-container">
+            <p class="christmas-wishes">
+                Wishing you a Merry Christmas and a Happy New Year filled with joy, peace, and love!
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> --> 
