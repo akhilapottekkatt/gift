@@ -1,15 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
     var audio = document.getElementById('christmasAudio');
 
-    // Play audio on user interaction
-    document.body.addEventListener('click', function() {
-        if (audio.paused) {
-            audio.play();
-        }
-    });
+     if (audio) {
+        // Play audio on user interaction
+        document.body.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+            }
+        });
 
-    // Play audio on page load (may not work on some browsers)
-    audio.play();
+        // Play audio on page load (may not work on some browsers)
+        audio.play();
+    } else {
+        console.error("Audio element with ID 'christmasAudio' not found.");
+    }
 
     // Generate snow
     let container = document.getElementById('container');
