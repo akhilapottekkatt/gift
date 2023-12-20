@@ -65,9 +65,9 @@ function addName() {
 
 // Function to open the gift box
 const giftMap = {
-    "ANJANA": "/gift1.gif",
-    "SANIGA": "/gift2.gif",
-    "ABHI": "/gift4.gif",
+    "ANJANA": "/images/gift1.gif",
+    "SANIGA": "/images/gift2.gif",
+    "ABHI": "//imagesgift4.gif",
     "JISHNU":"/gift5.gif",
     "GOPIKA":"/gift6.gif",
     "DEVIKA":"/gift7.gif",
