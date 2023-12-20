@@ -12,10 +12,10 @@
         </div>
 
 
-        <audio id="christmasAudio" src="we-wish-you-a-merry-christmas_60sec-174155.mp3" loop></audio>
-
         <!-- Add an image element to display the gift -->
         <img id="giftImage" alt="Gift Image">
+        
+        <audio id="christmasAudio" src="we-wish-you-a-merry-christmas_60sec-174155.mp3" loop></audio>
 
         <div class="wishes-container">
             <p class="christmas-wishes">
@@ -30,17 +30,14 @@
                 const params = new URLSearchParams(window.location.search);
                 const name = params.get('name');
                 const gift = params.get('gift');
-
                 // Display the result
                 const giftResultContainer = document.getElementById('giftResult');
                 const giftImage = document.getElementById('giftImage');
-
                 if (name && gift) {
                     // Display the name and gift information
                     giftResultContainer.innerHTML = `<p>${name} received a gift!</p>`;
-
                     // Set the source of the gift image with an absolute path
-                    giftImage.src = gift.startsWith('/') ? gift.substring(1) : gift;
+                    giftImage.src = gift.startsWith('/') ? gift : '/' + gift;
                 } else {
                     // Display a message if no valid data found
                     giftResultContainer.innerHTML = '<p>No valid data found.</p>';
@@ -52,7 +49,7 @@
 </html>
 
 
-<!-- <!DOCTYPE html>
+        <!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
