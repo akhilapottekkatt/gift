@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     generateSnow(container, 50);
 
     // Prepopulate the list with names
-    const initialNames = ["ANJANA", "SANIGA", "ABHI", "JISHNU", "GOPIKA", "DEVIKA", "ANU", "MINI", "PAPPAN", "THASNI", "SONI", "RAHUL"];
+    const initialNames = ["ANJANA", "SANIGA", "ABHI", "JISHNU", "GOPIKA", "DEVIKA", "ANU", "MINI", "PAPPAN", "ANUPAMA", "THASNI", "SONI", "RAHUL"];
     const nameList = document.getElementById('nameList').querySelector('ul');
     initialNames.forEach(name => {
         const listItem = document.createElement('li');
@@ -65,7 +65,7 @@ function addName() {
 
 // Function to open the gift box
 const giftMap = {
-    "ANJANA": "gift1.gif",
+    "ANJANA": "/gift1.gif",
     "SANIGA": "/gift2.gif",
     "ABHI": "/gift4.gif",
     "JISHNU":"/gift5.gif",
