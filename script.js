@@ -93,11 +93,12 @@ function openGift() {
         if (giftMap.hasOwnProperty(name)) {
             const giftImagePath = giftMap[name];
 
-            // Construct the URL with query parameters
-            const url = `gift.html?name=${encodeURIComponent(name)}&gift=${encodeURIComponent(giftImagePath)}`;
+            // Create a new image element
+            const giftImage = new Image();
+            giftImage.src = giftImagePath;
 
-            // Navigate to the gift.html page
-            window.location.href = url;
+            // Display the image in a modal or overlay
+            displayGiftImage(giftImage);
         } else {
             alert(`Sorry, no gift found for ${name}.`);
         }
@@ -105,6 +106,46 @@ function openGift() {
         alert('Please enter a name before opening the gift.');
     }
 }
+
+function displayGiftImage(imageElement) {
+    // Create a modal or overlay to display the image
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+    modal.appendChild(imageElement);
+
+    // Append the modal to the body
+    document.body.appendChild(modal);
+
+    // Add an event listener to close the modal when clicked
+    modal.addEventListener('click', function() {
+        modal.remove(); // Remove the modal from the DOM
+    });
+}
+
+
+// function openGift() {
+//     const nameList = document.getElementById('nameList').querySelector('ul');
+//     const lastEnteredName = nameList.lastElementChild;
+
+//     if (lastEnteredName) {
+//         const name = lastEnteredName.textContent.toUpperCase();
+
+//         // Check if the name exists in the gift map
+//         if (giftMap.hasOwnProperty(name)) {
+//             const giftImagePath = giftMap[name];
+
+//             // Construct the URL with query parameters
+//             const url = `gift.html?name=${encodeURIComponent(name)}&gift=${encodeURIComponent(giftImagePath)}`;
+
+//             // Navigate to the gift.html page
+//             window.location.href = url;
+//         } else {
+//             alert(`Sorry, no gift found for ${name}.`);
+//         }
+//     } else {
+//         alert('Please enter a name before opening the gift.');
+//     }
+// }
 
 
 function createFire() {
